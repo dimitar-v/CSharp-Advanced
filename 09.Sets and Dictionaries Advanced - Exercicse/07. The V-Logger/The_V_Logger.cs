@@ -8,7 +8,7 @@ namespace _07._The_V_Logger
     {
         static void Main(string[] args)
         {
-            var followers = new Dictionary<string, HashSet<string>>();
+            var followers = new Dictionary<string, HashSet<string>>(); // new Dictionary<string, Dictionary<string, HashSet<string>>>() "followers" and "following"
             var following = new Dictionary<string, int>();
 
             string input;

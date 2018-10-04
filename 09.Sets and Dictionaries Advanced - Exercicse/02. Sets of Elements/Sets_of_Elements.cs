@@ -13,7 +13,7 @@ namespace _02._Sets_of_Elements
 
             var nums = Console.ReadLine()
                 .Split(' ', StringSplitOptions.RemoveEmptyEntries)
-                .Select(int.Parse)
+                .Select(int.Parse) 
                 .ToArray();
 
             for (int i = 0; i < nums[0]; i++)
@@ -26,13 +26,17 @@ namespace _02._Sets_of_Elements
                 m.Add(Console.ReadLine());
             }
 
-            foreach (var item in n)
-            {
-                if (m.Contains(item))
-                {
-                    Console.Write(item + " ");
-                }
-            }
+            var commonNums = n.Intersect(m);
+
+            Console.WriteLine(string.Join(' ', commonNums));
+
+            //foreach (var item in n)
+            //{
+            //    if (m.Contains(item))
+            //    {
+            //        Console.Write(item + " ");
+            //    }
+            //}
         }
     }
 }
